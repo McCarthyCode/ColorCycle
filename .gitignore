@@ -1,0 +1,9 @@
+# .gitignore
+
+# Copyright (c) Matt McCarthy 2024
+# See LICENSE for details.
+
+__pycache__
+build
+colorcycle.spec
+
