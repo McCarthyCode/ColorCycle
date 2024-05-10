@@ -122,15 +122,7 @@ class Color(ArgsIterable):
 			raise NotImplementedError()
 
 		self.updatePath(dir, filename, ext)
-
-		modeToExportMethod : dict[str, Callable] = {
-			'png' : self.toPNG,
-			# TODO: more export methods go here (as needed)
-		}
-
-		exportMethod : Callable = modeToExportMethod[self._ext]
-
-		exportMethod()
+		self.toPNG()
 
 
 	def toPNG(self) -> None:
