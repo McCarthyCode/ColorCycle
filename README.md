@@ -10,7 +10,7 @@ See LICENSE for details.
 
 ## Synopsis
 
-**ColorCycle** is a terminal process sets your desktop wallpaper to a solid color that changes hue based in the minute of the hour&mdash;red for the top of the hour, then smooth transitions to yellow, green, cyan, indigo, violet and back to red in ten-minute increments.
+**ColorCycle** is a terminal process that sets your desktop wallpaper to a solid color that changes hue based on the minute of the hour&mdash;red for the top of the hour, then smooth transitions to yellow, green, cyan, indigo, violet and back to red in ten-minute increments.
 
 Consider this a project in artistic expression, or if you're feeling ambitious, a productivity tool. Knowing what time of the hour based on what color your wallpaper changes to is faster than looking at the clock, which tends to be pinned to the corner of our screens.
 
@@ -18,7 +18,7 @@ For the lazy, we don't even need to change our focus to approximate how much tim
 
 ## Basic Installation
 
-A macOS binary is provided in the project's `dist` directory. Windows and Linux users face the ultimatum of waiting for support or compiling on their own, modded software&mdash;which will involve finding a way to update desktop wallpaper programmatically. To make this easier, most of the process is outlined below.
+A **macOS (Sonoma, Silicon/ARM)** binary is provided in the project's `dist` directory. Windows and Linux users face the ultimatum of waiting for support or compiling on their own, modded software&mdash;which will involve finding a way to update desktop wallpaper programmatically. To make this easier, most of the process is outlined below.
 
 ## Compiling from Source
 
@@ -99,7 +99,7 @@ This will perform the following steps in order:
 When complete, you are ready to run the executable.
 
 ```zsh
-dist/colorcycle
+make run
 ```
 
 Optionally, you may want to add the `dist` directory to your `$PATH` variable. That way, you can simply run:
@@ -109,6 +109,4 @@ colorcycle
 ```
 
 Exit with `ctrl` + `c`.
-
-
 

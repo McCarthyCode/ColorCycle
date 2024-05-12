@@ -4,23 +4,27 @@
 # See LICENSE for details.
 
 
+NULL=2>/dev/null
 PIP=.venv/bin/pip
 PYINSTALLER=.venv/bin/pyinstaller
 
 
-dist: dependencies
+colorcycle :: dependencies
 	$(PYINSTALLER) -F src/main.py -n colorcycle
 
-clean:
-	rm -rf .venv build dist colorcycle.spec
-	find . -type d -name '__pycache__' -exec rm -rf {} \;
+clean ::
+	find . -type d -name '__pycache__' -exec rm -rf {} $(NULL) \;
+	rm -rf build colorcycle.spec .venv
 
-run: dist
+clean-dist :: clean
+	rm -rf dist
+
+run :: colorcycle
 	dist/colorcycle
 
-dependencies: .venv
+dependencies :: .venv
 	$(PIP) install -r requirements.txt
 
-.venv:
+.venv ::
 	virtualenv .venv
 
